@@ -6,12 +6,14 @@
 }
 body {
   font-family: Arial, sans-serif;
-  background: linear-gradient(to bottom, #1e1e1e, #333);
+  background: url('imagenes/fondo.jpg') no-repeat center center fixed;
+  background-size: cover;
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  overflow: hidden;
 }
 
 /* Contenedor principal */
@@ -26,25 +28,26 @@ body {
     "footer footer";
   grid-template-rows: 100px 300px 1fr 100px;
   grid-template-columns: 300px 1fr;
-  gap: 10px;
+  gap: 15px;
+  backdrop-filter: blur(5px);
 }
 
 /* Encabezado */
 .header {
   grid-area: header;
-  background: linear-gradient(to right, #ff00ff, #ff4500);
+  background: rgba(255, 255, 255, 0.3);
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1.5rem;
   border-radius: 10px;
-  box-shadow: 0px 0px 10px #ff4500;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
 }
 
-/* Perfil */
+/* Avatar */
 .profile {
   grid-area: profile;
-  background: #222;
+  background: rgba(255, 255, 255, 0.2);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -55,11 +58,16 @@ body {
 }
 
 .avatar {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   background: #555;
   border-radius: 50%;
-  box-shadow: 0 0 10px #00ffff;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
 }
 
 /* Contenido principal */
@@ -67,11 +75,11 @@ body {
   grid-area: main-content;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+  gap: 15px;
 }
 
 .box {
-  background: #444;
+  background: rgba(255, 255, 255, 0.2);
   height: 100px;
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgba(255, 255, 0, 0.5);
@@ -82,11 +90,11 @@ body {
   grid-area: sidebar;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
 }
 
 .widget {
-  background: #333;
+  background: rgba(255, 255, 255, 0.3);
   height: 100px;
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgba(255, 0, 255, 0.5);
@@ -96,7 +104,7 @@ body {
 .footer {
   grid-area: footer;
   text-align: center;
-  background: #111;
+  background: rgba(255, 255, 255, 0.2);
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0px 0px 10px rgba(0, 0, 255, 0.5);
