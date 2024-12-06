@@ -1,117 +1,103 @@
-/* General */
+/* Configuración base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
-    font-family: 'Courier New', Courier, monospace; /* Fuente retro */
-    margin: 0;
-    padding: 0;
-    background-color: #000; /* Fondo negro */
-    color: #fff; /* Texto blanco */
-    line-height: 1.6;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #1e1e1e, #333);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
-header {
-    text-align: center;
-    padding: 20px;
-    background-color: #1a1a1a;
-    border-bottom: 3px solid #00ffcc;
+/* Contenedor principal */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "profile main-content"
+    "profile sidebar"
+    "footer footer";
+  grid-template-rows: 100px 300px 1fr 100px;
+  grid-template-columns: 300px 1fr;
+  gap: 10px;
 }
 
-header h1 {
-    font-size: 2.5em;
-    color: #00ffcc; /* Verde neón */
+/* Encabezado */
+.header {
+  grid-area: header;
+  background: linear-gradient(to right, #ff00ff, #ff4500);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px #ff4500;
 }
 
-header p {
-    font-size: 1.2em;
-    color: #ff66ff; /* Rosa neón */
+/* Perfil */
+.profile {
+  grid-area: profile;
+  background: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 255, 255, 0.5);
 }
 
-/* Secciones */
-main {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 20px;
+.avatar {
+  width: 100px;
+  height: 100px;
+  background: #555;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #00ffff;
 }
 
-.left-section, .right-section {
-    width: 20%; /* Ancho de las columnas laterales */
-    text-align: center;
+/* Contenido principal */
+.main-content {
+  grid-area: main-content;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
 }
 
-.left-section img, .right-section img {
-    max-width: 100%; /* Ajusta el tamaño de las imágenes */
-    border: 2px solid #ff66ff; /* Borde decorativo */
-    margin-bottom: 10px;
+.box {
+  background: #444;
+  height: 100px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(255, 255, 0, 0.5);
 }
 
-.gallery {
-    width: 60%; /* Ancho de la sección central */
-    text-align: center;
+/* Barra lateral */
+.sidebar {
+  grid-area: sidebar;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.gallery h2 {
-    color: #ff66ff;
-    margin-bottom: 20px;
-}
-
-.gallery .images {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px; /* Espacio entre imágenes */
-    justify-content: center;
-}
-
-.gallery .images img {
-    max-width: 100px; /* Tamaño de las imágenes */
-    border: 2px solid #00ffcc;
-    border-radius: 5px;
-}
-
-/* Pie de página */
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #1a1a1a;
-    color: #00ffcc;
-    margin-top: 20px;
-    font-style: italic;
-}
-
-    font-size: 1.2em;
-    color: #ccc; /* Gris claro */
-}
-
-/* Secciones específicas */
-.Fotos {
-    margin: 20px 0;
-}
-
-.Canciones {
-    margin: 20px 0;
+.widget {
+  background: #333;
+  height: 100px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(255, 0, 255, 0.5);
 }
 
 /* Pie de página */
-footer {
-    background-color: #1a1a1a;
-    text-align: center;
-    padding: 10px;
-    margin-top: 20px;
-    color: #00ffcc;
-    font-style: italic;
-}
-
-/* Botón o elementos interactivos (futuro) */
-button {
-    background-color: #ff66ff;
-    color: #000;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1em;
-    cursor: pointer;
-    margin-top: 10px;
-}
-
-button:hover {
-    background-color: #00ffcc;
-    color: #000;
+.footer {
+  grid-area: footer;
+  text-align: center;
+  background: #111;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 255, 0.5);
 }
