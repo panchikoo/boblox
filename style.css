@@ -1,39 +1,75 @@
-/* Estilo básico */
+/* Estilo general */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Courier New', Courier, monospace; /* Fuente retro */
     margin: 0;
     padding: 0;
-    background-color: #fff7f3; /* Fondo suave */
-    color: #333;
+    background-color: #000; /* Fondo negro */
+    color: #fff; /* Texto blanco */
+    line-height: 1.6;
 }
 
+/* Encabezado */
 header {
-    background-color: #ffcedf;
+    background-color: #1a1a1a; /* Gris oscuro */
+    color: #00ffcc; /* Color neón */
     text-align: center;
     padding: 20px;
+    border-bottom: 3px solid #00ffcc;
 }
 
 header h1 {
     font-size: 2.5em;
-    color: #8b005d;
+    margin: 0;
 }
 
-header p {
-    font-size: 1.2em;
-}
-
+/* Secciones principales */
 main {
     padding: 20px;
 }
 
 main h2 {
-    color: #8b005d;
+    color: #ff66ff; /* Rosa neón */
+    border-bottom: 2px solid #ff66ff;
+    display: inline-block;
     margin-bottom: 10px;
 }
 
+main p {
+    font-size: 1.2em;
+    color: #ccc; /* Gris claro */
+}
+
+/* Secciones específicas */
+.Fotos {
+    margin: 20px 0;
+}
+
+.Canciones {
+    margin: 20px 0;
+}
+
+/* Pie de página */
 footer {
-    background-color: #ffcedf;
+    background-color: #1a1a1a;
     text-align: center;
     padding: 10px;
     margin-top: 20px;
+    color: #00ffcc;
+    font-style: italic;
+}
+
+/* Botón o elementos interactivos (futuro) */
+button {
+    background-color: #ff66ff;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #00ffcc;
+    color: #000;
 }
