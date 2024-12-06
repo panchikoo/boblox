@@ -1,4 +1,4 @@
-/* Estilo general */
+/* General */
 body {
     font-family: 'Courier New', Courier, monospace; /* Fuente retro */
     margin: 0;
@@ -8,33 +8,75 @@ body {
     line-height: 1.6;
 }
 
-/* Encabezado */
 header {
-    background-color: #1a1a1a; /* Gris oscuro */
-    color: #00ffcc; /* Color neón */
     text-align: center;
     padding: 20px;
+    background-color: #1a1a1a;
     border-bottom: 3px solid #00ffcc;
 }
 
 header h1 {
     font-size: 2.5em;
-    margin: 0;
+    color: #00ffcc; /* Verde neón */
 }
 
-/* Secciones principales */
+header p {
+    font-size: 1.2em;
+    color: #ff66ff; /* Rosa neón */
+}
+
+/* Secciones */
 main {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
     padding: 20px;
 }
 
-main h2 {
-    color: #ff66ff; /* Rosa neón */
-    border-bottom: 2px solid #ff66ff;
-    display: inline-block;
+.left-section, .right-section {
+    width: 20%; /* Ancho de las columnas laterales */
+    text-align: center;
+}
+
+.left-section img, .right-section img {
+    max-width: 100%; /* Ajusta el tamaño de las imágenes */
+    border: 2px solid #ff66ff; /* Borde decorativo */
     margin-bottom: 10px;
 }
 
-main p {
+.gallery {
+    width: 60%; /* Ancho de la sección central */
+    text-align: center;
+}
+
+.gallery h2 {
+    color: #ff66ff;
+    margin-bottom: 20px;
+}
+
+.gallery .images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Espacio entre imágenes */
+    justify-content: center;
+}
+
+.gallery .images img {
+    max-width: 100px; /* Tamaño de las imágenes */
+    border: 2px solid #00ffcc;
+    border-radius: 5px;
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #1a1a1a;
+    color: #00ffcc;
+    margin-top: 20px;
+    font-style: italic;
+}
+
     font-size: 1.2em;
     color: #ccc; /* Gris claro */
 }
