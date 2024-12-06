@@ -1,0 +1,39 @@
+/* Estilo básico */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff7f3; /* Fondo suave */
+    color: #333;
+}
+
+header {
+    background-color: #ffcedf;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: #8b005d;
+}
+
+header p {
+    font-size: 1.2em;
+}
+
+main {
+    padding: 20px;
+}
+
+main h2 {
+    color: #8b005d;
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #ffcedf;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
